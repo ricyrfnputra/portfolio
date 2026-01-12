@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricy — Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="src/img/favicon-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Sora', sans-serif; background-color: #ffffff; color: #000; cursor: none; }
+        .text-display { font-size: clamp(2.5rem, 8vw, 7rem); line-height: 0.9; font-weight: 800; letter-spacing: -0.04em; }
+        
+        #cursor {
+            width: 20px; height: 20px; border: 1.5px solid #000; border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 9999;
+            transition: transform 0.15s ease-out, background 0.3s ease, border 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        #cursor-dot {
+            width: 4px; height: 4px; background: #000; border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .project-card { aspect-ratio: 1 / 1; overflow: hidden; position: relative; background: #f9f9f9; }
+        .project-card img { filter: grayscale(100%); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; height: 100%; object-fit: cover; }
+        .project-card:hover img { filter: grayscale(0%); transform: scale(1.1); }
+        
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1.5px; bottom: -4px; left: 0; background: #000; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+
+        @media (max-width: 768px) {
+            #cursor, #cursor-dot { display: none; }
+            body { cursor: auto; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-dot"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-100 bg-white/90 backdrop-blur-md px-6 py-8 lg:px-12 flex justify-between items-center border-b border-zinc-50">
+        <a href="#" class="text-2xl font-800 tracking-tighter uppercase cursor-hover">RICY<span class="text-zinc-300">.</span></a>
+        <div class="hidden md:flex space-x-12 text-[11px] font-800 uppercase tracking-widest">
+            <a href="#work" class="nav-link cursor-hover">Work</a>
+            <a href="#about" class="nav-link cursor-hover">About Me</a>
+            <a href="#contact" class="nav-link cursor-hover">Contact</a>
+        </div>
+        <div class="md:hidden text-xl"><i class="fa-solid fa-bars-staggered"></i></div>
+    </nav>
+
+    <!-- Hero - Image -->
+    <header id="home" class="pt-48 pb-24 px-6 lg:px-12 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-display mb-8 uppercase italic">Hello<br>I'm Ricy</h1>
+                <p class="text-xl text-zinc-500 max-w-md leading-relaxed mb-10">
+                  I’m an IT student low-key obsessed with web dev. Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. I’m all about pushing limits to build something sick! 🚀
+                </p>
+                <a href="#work" class="inline-block bg-black text-white px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition cursor-hover">
+                    Explore Archive
+                </a>
+            </div>
+            <div class="reveal delay-200">
+                <div class="project-card cursor-hover shadow-2xl" style="aspect-ratio: 4/5;">
+                    <img src="src/img/jelelamakasep.jpeg" alt="Hero Photo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- My Project -->
+    <section id="work" class="py-32 px-6 lg:px-12 bg-zinc-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-20 reveal">
+                <h2 class="text-4xl lg:text-6xl font-800 uppercase italic tracking-tighter">My Project</h2>
+                <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest border-b border-zinc-200 pb-2">Vol 1</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                <div class="group cursor-hover">
+                    <div class="project-card"><img src="src/img/commingsoon.png" alt="Work"></div>
+                    <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">01</span></div>
+                </div>
+                <div class="group cursor-hover">
+                    <div class="project-card"><img src="src/img/commingsoon.png" alt="Work"></div>
+                    <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">02</span></div>
+                </div>
+                <div class="group cursor-hover">
+                    <div class="project-card"><img src="src/img/commingsoon.png" alt="Work"></div>
+                    <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">03</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-40 px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h2 class="text-sm font-800 uppercase tracking-[0.4em] text-zinc-400 mb-6">Behind the name</h2>
+                <h3 class="text-5xl lg:text-7xl font-800 uppercase italic tracking-tighter leading-none mb-10">Ricy Rifani <br><br> Junior Developer</h3>
+            </div>
+            <div class="reveal space-y-8">
+                <p class="text-2xl text-zinc-800 font-light leading-relaxed italic">
+                    "IT Student & Aspiring Web Developer. Currently exploring the intersection of web design and system architecture. As a junior learner, I am focused on building clean, functional, and minimalist digital solutions from the ground up."
+                </p>
+                <p class="text-lg text-zinc-500 leading-relaxed">
+                    "Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya." — (HR. Ahmad)"
+                </p>
+                <!-- <div class="flex space-x-12 pt-10 border-t border-zinc-100">
+                    <div><h4 class="font-800 text-3xl">02+</h4><p class="text-[10px] uppercase font-bold text-zinc-400 tracking-widest mt-2">Years Exp</p></div>
+                    <div><h4 class="font-800 text-3xl">50+</h4><p class="text-[10px] uppercase font-bold text-zinc-400 tracking-widest mt-2">Projects</p></div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section id="message" class="py-40 px-6 lg:px-12 bg-white">
+        <div class="reveal space-y-2">
+            <h1 class="text-4xl lg:text-4xl font-600 text-gray-600 font-bold font-serif antialiased italic ">Send me a message</h1>
+            <p class="lg:text-gray-600 text-2xl font-sans">Have a project message in mind or just want to sa hi? Send me <br> a message using the form below.</p>
+        </div>
+        <!-- Form -->
+        <div class="min-h-screen bg-white flex items-center justify-center p-6">
+            <div class="w-full max-w-md bg-white">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold text-black tracking-tight mb-2">Message.</h2>
+                        <div class="h-1 w-12 bg-black"></div> 
+                </div>
+
+    <form action="#" class="space-y-">
+      <div class="relative group">
+        <input 
+          type="text" 
+          id="name"
+          placeholder="Full Name" 
+          class="w-full px-0 py-3 bg-transparent border-b border-gray-200 text-black focus:outline-none focus:border-black transition-colors duration-300 placeholder:text-gray-400 placeholder:font-light">
+      </div>
+
+      <div class="relative group">
+        <input 
+          type="email" 
+          id="email"
+          placeholder="Email Address" 
+          class="w-full px-0 py-3 bg-transparent border-b border-gray-200 text-black focus:outline-none focus:border-black transition-colors duration-300 placeholder:text-gray-400 placeholder:font-light">
+      </div>
+
+      <div class="relative group">
+        <textarea 
+          id="message"
+          rows="3" 
+          placeholder="Your Message" 
+          class="w-full px-0 py-3 bg-transparent border-b border-gray-200 text-black focus:outline-none focus:border-black transition-colors duration-300 placeholder:text-gray-400 placeholder:font-light resize-none"
+        ></textarea>
+      </div>
+
+      <div class="pt-6">
+        <button 
+          type="submit" 
+          class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-black border-2 border-black hover:bg-white hover:text-black rounded-full">
+          <span class="relative">Send Message</span>
+        </button>
+      </div>
+    </form>
+    
+    <div class="mt-16 pt-8 border-t border-gray-50 flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-400">
+      <span>RICY</span>
+      <span>2026 © Portfolio</span>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <!--  Footer  -->
+    <footer id="contact" class="py-32 px-6 lg:px-12 text-center bg-zinc-50">
+        <h2 class="text-5xl lg:text-8xl font-800 uppercase tracking-tighter italic mb-12 reveal cursor-hover">Let's talk</h2>
+        <div class="flex flex-wrap justify-center gap-10 text-[11px] font-800 uppercase tracking-[0.3em] reveal">
+            <a href="#" class="cursor-hover hover:text-zinc-400 transition">Instagram</a>
+            <a href="#" class="cursor-hover hover:text-zinc-400 transition underline underline-offset-8">@ricyrfnputra51@gmail.com</a>
+            <a href="#" class="cursor-hover hover:text-zinc-400 transition">LinkedIn</a>
+        </div>
+        <p class="mt-32 text-[9px] text-zinc-300 font-bold uppercase tracking-[0.5em]">© 2026 Ricy Rifani P. Junior Developer.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        const cursor = document.getElementById('cursor');
+        const dot = document.getElementById('cursor-dot');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+        });
+
+        const hovers = document.querySelectorAll('.cursor-hover');
+        hovers.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
+                cursor.style.background = 'rgba(0,0,0,0.05)';
+                cursor.style.border = '1px solid transparent';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.background = 'transparent';
+                cursor.style.border = '1.5px solid #000';
+            });
+        });
+
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+    </script>
+</body>
+</html>
