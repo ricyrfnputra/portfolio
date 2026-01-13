@@ -9,75 +9,72 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-900 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
-  <nav class="flex bg-slate-900 p-5 sticky top-0 left-0 w-full z-40 shadow-md text-2xl items-center">
-    <ul class="flex gap-6 font-extrabold w-full px-10">
-       <!-- Logo -->
-      <li class="text-3xl font-serif text-white mr-auto cursor-pointer"><a href="#">RICY.</a></li>
-      <li><a href="#" class="text-violet-400 hover:text-slate-400">About Me</a></li>
-      <li><a href="#Project" class="hover:text-violet-400">Project</a></li>
-      <li><a href="#contact" class="hover:text-violet-400">Contact</a></li>
+  
+  <nav class="flex bg-slate-900/80 backdrop-blur-md p-5 sticky top-0 left-0 w-full z-50 shadow-md items-center">
+    <ul class="flex gap-6 font-extrabold w-full px-6 md:px-20 items-center">
+      <li class="text-2xl md:text-3xl font-serif text-white mr-auto cursor-pointer">
+        <a href="#">RICY.</a>
+      </li>
+      <li class="hidden md:block"><a href="#" class="text-violet-400 hover:text-white transition">About</a></li>
+      <li><a href="#project" class="hover:text-violet-400 transition">Project</a></li>
+      <li><a href="#contact" class="hover:text-violet-400 transition">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- About Me -->
-  <section class="flex pt-10 flex-col md:flex-row w-full mt-15 items-center" id="#">
-  <div class=" md:p-5 md:m-10 text-2xl w-full md:w-1/2">
-    <h1 class="text-7xl md:text-7xl font-serif font-bold">
-      Hello, I'm <span class="md:hover:text-violet-500 transition duration-500">Ricy</span>
-    </h1>
-    <h2 class="text-3xl md:text-5xl font-serif">
-      Junior Software <span class="font-bold md:hover:text-violet-500 transition duration-600">Developer</span>
-    </h2>
-    
-    <p class="mt-5 md:mt-10 text-lg md:text-2xl">
-      I’m an IT student low-key obsessed with <span class="font-bold text-violet-500">web dev</span>. 
-      Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. 
-      I’m all about pushing limits to build something sick! 🚀
-    </p>
+  <section class="flex flex-col md:flex-row w-full min-h-[90vh] items-center px-6 md:px-20 py-10" id="about">
+    <div class="w-full md:w-1/2 text-left order-2 md:order-1 mt-10 md:mt-0">
+      <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
+        Hello, I'm <span class="text-violet-500 transition duration-500 hover:text-violet-400">Ricy</span>
+      </h1>
+      <h2 class="text-3xl md:text-5xl font-serif mt-2">
+        Junior Software <span class="font-bold text-violet-500">Developer</span>
+      </h2>
+      
+      <p class="mt-8 text-lg md:text-xl leading-relaxed max-w-xl">
+        I’m an IT student low-key obsessed with <span class="font-bold text-violet-500 border-b border-violet-500/30">web dev</span>. 
+        Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. 🚀
+      </p>
 
-    <div class="mt-10 bg-indigo-100 inline-block text-black font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
-      <button type="button" class="cursor-pointer font-semibold font-mono md:text-lg">
-        <a href="src/pdf/Personal CV.pdf" target="_blank">Explore Archive</a>
-      </button>
+      <div class="mt-10 bg-indigo-100 inline-block text-black font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
+        <button type="button" class="cursor-pointer font-semibold font-mono md:text-lg">
+          <a href="src/pdf/Personal CV.pdf" target="_blank">Explore   Archive</a>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <div class="flex justify-center mt-20 mb-30 mask-b-from-56">
-    <img src="src/img/jelelamakasep.jpeg" alt="image" 
-         class="p-5 w-full max-w-md md:max-w-none object-cover cursor-pointer transition-all duration-300 hover:scale-105 hover:grayscale-0 grayscale">
-  </div>
-
-</section>
-
-
-  <!-- Project -->
-  <section id="project" class="py-32 px-6 lg:px-12 bg-zinc-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex justify-between items-end mb-20 reveal">
-        <h2 class="text-4xl lg:text-6xl font-800 uppercase italic tracking-tighter">My Project</h2>
-        <!-- <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest border-b border-zinc-200 pb-2">Vol 1</span> -->
-          </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
-              <div class="group cursor-hover">
-                <div class="project-card"><img src="src/img/soon.jpg" alt="Work"></div>
-                  <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">01</span></div>
-                </div>
-                <div class="group cursor-hover">
-                  <div class="project-card"><img src="src/img/soon.jpg" alt="Work"></div>
-                  <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">02</span></div>
-                </div>
-                <div class="group cursor-hover">
-                  <div class="project-card"><img src="src/img/soon.jpg" alt="Work"></div>
-                <div class="mt-5 flex justify-between items-center"><h4 class="font-800 uppercase text-xs tracking-widest">soon</h4><span class="text-zinc-300 text-[10px] font-bold">03</span>
-              </div>
-          </div>
+    <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2">
+      <div class="relative overflow-hidden rounded-2xl group max-w-xs md:max-w-md">
+        <img src="src/img/jelelamakasep.jpeg" alt="image Ricy" 
+             class="w-full h-auto object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
+        <div class="absolute inset-0 border-2 border-violet-500/20 rounded-2xl pointer-events-none"></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="w-full flex ">
-    <div></div>
+  <section id="project" class="py-32 px-6 lg:px-20 bg-zinc-50 text-violet-400">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-end mb-16">
+        <h2 class="text-4xl lg:text-6xl font-black uppercase italic tracking-tighter">My Project</h2>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="group cursor-pointer">
+          <div class="overflow-hidden rounded-xl bg-zinc-200">
+            <img src="src/img/soon.jpg" alt="Work" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="mt-5 flex justify-between items-center px-2">
+            <h4 class="font-bold uppercase text-sm tracking-widest">SOON</h4>
+            <span class="text-zinc-300 text-xs font-bold">01</span>
+          </div>
+        </div>
+        
+        </div>
+    </div>
+  </section>
+
+  <section id="contact" class="w-full py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold text-white mb-4">Let's Connect</h3>
+    <p>Soon.</p>
   </section>
 
   <script type="module" src="/src/main.js"></script>
