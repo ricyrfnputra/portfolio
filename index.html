@@ -4,39 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="src/img/favicon-icon.png" />
-  <title>Ricy Portfolio</title>
+  <title>Ricy Rifani Putra</title>
   <link rel="stylesheet" href="src/style.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-900 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
-  <nav class="flex bg-slate-900 p-5 justify-end">
-      <ul class="flex gap-6 font-medium mt-4">
-        <li><a href="#" class="bg-transparent p-3 hover:bg-white rounded-2xl text-violet-400 transition duration-600 ">About Me</a></li>
-        <li><a href="#project" class="hover:text-violet-400 text-lg">Project</a></li>
-        <li><a href="#contact" class="hover:text-violet-400 text-lg">Contact</a></li>
-        <!-- <li><a href="#" class="hover:text-white text-lg">Home</a></li> -->
-      </ul>
+  <nav class="flex bg-slate-900 p-5 sticky top-0 left-0 w-full z-40 shadow-md text-2xl items-center">
+    <ul class="flex gap-6 font-extrabold w-full px-10">
+       <!-- Logo -->
+      <li class="text-3xl font-serif text-white mr-auto cursor-pointer"><a href="#">RICY.</a></li>
+      <li><a href="#" class="text-violet-400 hover:text-slate-400">About Me</a></li>
+      <li><a href="#Project" class="hover:text-violet-400">Project</a></li>
+      <li><a href="#contact" class="hover:text-violet-400">Contact</a></li>
+    </ul>
   </nav>
 
   <!-- About Me -->
-  <section class="flex w-full mt-25" id="Project">
-    <div class="p-10 m-30 text-2xl">
-      <h1 class="text-7xl font-serif font-bold">Hello, I'm <span class="md:hover:text-violet-500 transition duration-500">Ricy</span></h1>
-      <h2 class="text-5xl font-serif">Junior Software <span class="font-bold md:hover:text-violet-500 transition duration-600">Developer</span></h2>
-        <p class="md:mt-10 text-2xl">I’m an IT student low-key obsessed with <span class="font-bold text-violet-500 "> web dev</span><div class="br"></div> Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. I’m all about pushing limits to build something sick! 🚀
-        </p>
-        <!-- Button Explore Project -->
-        <div id="button" class="mt-30 bg-indigo-100 inline-block text-black font-bold md:hover:bg-violet-400 transition duration-400 p-2 m-2 cursor-pointer">
-          <button id="button" type="button" class="cursor-pointer font-semibold font-mono md:text-lg"><a href="src/pdf/Personal CV.pdf" target="_blank">Explore Archive</a></button>
-        </div>
+  <section class="flex pt-10 flex-col md:flex-row w-full mt-15 items-center" id="#">
+  <div class=" md:p-5 md:m-10 text-2xl w-full md:w-1/2">
+    <h1 class="text-7xl md:text-7xl font-serif font-bold">
+      Hello, I'm <span class="md:hover:text-violet-500 transition duration-500">Ricy</span>
+    </h1>
+    <h2 class="text-3xl md:text-5xl font-serif">
+      Junior Software <span class="font-bold md:hover:text-violet-500 transition duration-600">Developer</span>
+    </h2>
+    
+    <p class="mt-5 md:mt-10 text-lg md:text-2xl">
+      I’m an IT student low-key obsessed with <span class="font-bold text-violet-500">web dev</span>. 
+      Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. 
+      I’m all about pushing limits to build something sick! 🚀
+    </p>
+
+    <div class="mt-10 bg-indigo-100 inline-block text-black font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
+      <button type="button" class="cursor-pointer font-semibold font-mono md:text-lg">
+        <a href="src/pdf/Personal CV.pdf" target="_blank">Explore Archive</a>
+      </button>
     </div>
-  </section>
-  <!-- Image -->
-  <section class="flex w-full">
-    <div class="m-30">
-      <img src="src/img/jelelamakasep.jpeg" alt="image" class="p-5 m-10 md:m-10 w-180 object-cover cursor-pointer transition-all duration-300 hover:scale-105 hover:grayscale-0 grayscale">
-    </div>
-  </section>
+  </div>
+
+  <div class="flex justify-center mt-20 mb-30 mask-b-from-56">
+    <img src="src/img/jelelamakasep.jpeg" alt="image" 
+         class="p-5 w-full max-w-md md:max-w-none object-cover cursor-pointer transition-all duration-300 hover:scale-105 hover:grayscale-0 grayscale">
+  </div>
+
+</section>
+
 
   <!-- Project -->
   <section id="project" class="py-32 px-6 lg:px-12 bg-zinc-50">
@@ -64,7 +76,9 @@
   </section>
 
   <!-- Contact Section -->
-
+  <section class="w-full flex ">
+    <div></div>
+  </section>
 
   <script type="module" src="/src/main.js"></script>
 </body>
