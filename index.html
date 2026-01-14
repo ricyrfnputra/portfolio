@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-slate-900 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
-  
-  <nav class="flex bg-slate-900/80 backdrop-blur-md p-5 sticky top-0 left-0 w-full z-50 shadow-md items-center">
+<body class="bg-gray-800 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
+  <nav class="flex bg-gray-800/90 backdrop-blur-md p-5 sticky top-0 left-0 w-full z-50 shadow-md items-center">
     <ul class="flex gap-6 font-extrabold w-full px-6 md:px-20 items-center">
       <li class="text-2xl md:text-3xl font-serif text-white mr-auto cursor-pointer">
-        <a href="#">RICY.</a>
+        <a href="#"><img src="public/r-logo.png" class="size-20"></a>
       </li>
       <li class="hidden md:block"><a href="#" class="text-violet-400 hover:text-white transition">About</a></li>
       <li><a href="#project" class="hover:text-violet-400 transition">Project</a></li>
@@ -24,10 +23,10 @@
   <section class="flex flex-col md:flex-row w-full min-h-[90vh] items-center px-6 md:px-20 py-10" id="about">
     <div class="w-full md:w-1/2 text-left order-2 md:order-1 mt-10 md:mt-0">
       <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
-        Hello, I'm <span class="text-violet-500 transition duration-500 hover:text-violet-400">Ricy</span>
+        Hello, I'm <span class="text-violet-500 transition duration-500 hover:text-violet-300 border border-slate-700 hover:border-slate-300 p-2">Ricy</span>
       </h1>
-      <h2 class="text-3xl md:text-5xl font-serif mt-2">
-        Junior Software <span class="font-bold text-violet-500">Developer</span>
+      <h2 class="text-3xl md:text-5xl font-serif">
+        Junior Software <span class="font-bold text-violet-500 ">Developer</span> 
       </h2>
       
       <p class="mt-8 text-lg md:text-xl leading-relaxed max-w-xl">
@@ -35,23 +34,24 @@
         Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. 🚀
       </p>
 
-      <div class="mt-10 bg-indigo-100 inline-block text-black font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
-        <button type="button" class="cursor-pointer font-semibold font-mono md:text-lg">
-          <a href="src/pdf/Personal CV.pdf" target="_blank">Explore   Archive</a>
+      <div class="mt-10 border border-white rounded-2xl text-white inline-block font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
+        <button type="button" class="cursor-pointer font-semibold md:text-lg">
+          <a href="src/pdf/Personal CV.pdf" target="_blank" class="font-mono">Explore   Archive</a>
         </button>
       </div>
     </div>
 
     <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2">
       <div class="relative overflow-hidden rounded-2xl group max-w-xs md:max-w-md">
-        <img src="src/img/jelelamakasep.jpeg" alt="image Ricy" 
+        <img src="public/ric-1.jpeg" alt="image Ricy" 
              class="w-full h-auto object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0">
         <div class="absolute inset-0 border-2 border-violet-500/20 rounded-2xl pointer-events-none"></div>
       </div>
     </div>
   </section>
 
-  <section id="project" class="py-32 px-6 lg:px-20 bg-zinc-50 text-violet-400">
+  <!-- Project Section -->
+  <section id="project" class="py-32 px-6 lg:px-20 bg-zinc-50 hover:text-violet-400">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-end mb-16">
         <h2 class="text-4xl lg:text-6xl font-black uppercase italic tracking-tighter">My Project</h2>
@@ -60,21 +60,42 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="group cursor-pointer">
           <div class="overflow-hidden rounded-xl bg-zinc-200">
-            <img src="src/img/soon.jpg" alt="Work" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+            <img src="public/soon.jpg" alt="Work" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
           </div>
           <div class="mt-5 flex justify-between items-center px-2">
             <h4 class="font-bold uppercase text-sm tracking-widest">SOON</h4>
             <span class="text-zinc-300 text-xs font-bold">01</span>
           </div>
-        </div>
-        
-        </div>
+        </div>  
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="w-full py-20 px-6 text-center">
-    <h3 class="text-3xl font-bold text-white mb-4">Let's Connect</h3>
-    <p>Soon.</p>
+  <!-- Contact -->
+  <section id="contact" class="w-full py-20 px-6">
+    <div class="max-w-6xl mx-auto mb-10">
+      <h3 class="text-white mb-4 text-5xl font-semibold italic"><span class="text-violet-400 text-5xl">#</span> contacts <span></span></h3>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <div class="text-gray-300 text-2xl text-left">
+        <p>Feel free to contact me if there is anything else you need or if you have any questions.</p>
+      </div>
+
+      <div class="space-y-3 border border-gray-500 text-xl font-extrabold p-6 m-6 hover:border-gray-100 transition duration-600 cursor-pointer w-full md:w-auto md:justify-self-end ">
+        <p class="text-center md:text-left">Message me here</p>
+        <a href="mailto:ricyrfnputra51@gmail.com"
+        class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
+        <span class="flex group-hover:scale-110 transition-transform"><img src="public/email.svg" alt="email" class="w-6 h-6"></span>
+        <span class="font-medium font-mono lg:text-lg text-base">ricyrfnputra51@gmail.com</span>
+        </a>      
+        <a href="github.com/ricyrfnputra"
+        class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
+        <span class="flex group-hover:scale-110 transition-transform"><img src="public/github.svg" alt="github" class="w-6 h-6"></span>
+        <span class="font-medium font-mono">ricyrfnputra</span>
+        </a>
+      </div>
+    </div>
   </section>
 
   <script type="module" src="/src/main.js"></script>
