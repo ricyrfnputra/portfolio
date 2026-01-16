@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoint Test</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="m-5 p-6 rounded-xl transition-all duration-500
+            /* Default (HP): Background merah, teks kecil, 1 kolom */
+            bg-red-100 text-sm border-2 border-red-500
+            
+            /* SM (Small Tablet): Background orange, teks sedang */
+            sm:bg-orange-100 sm:text-base sm:border-orange-500
+            
+            /* MD (Tablet): Background kuning, padding bertambah */
+            md:bg-yellow-100 md:p-10 md:border-yellow-500
+            
+            /* LG (Laptop): Background hijau, teks besar, lebar maksimal */
+            lg:bg-green-100 lg:text-xl lg:max-w-4xl lg:border-green-500
+            
+            /* XL (Desktop): Background biru, bayangan tebal */
+            xl:bg-blue-100 xl:shadow-2xl xl:border-blue-500
+            
+            /* 2XL (Monitor Lebar): Background ungu, teks sangat besar */
+            2xl:bg-purple-100 2xl:text-3xl 2xl:border-purple-500">
+            
+  <h1 class="font-bold">
+    <span class="2xl:hidden">Ukuran Layar Sekarang: </span>
+    <span class="sm:hidden">Mobile (Default)</span>
+    <span class="hidden sm:inline md:hidden">Small (sm)</span>
+    <span class="hidden md:inline lg:hidden">Medium (md)</span>
+    <span class="hidden lg:inline xl:hidden">Large (lg)</span>
+    <span class="hidden xl:inline 2xl:hidden">Extra Large (xl)</span>
+    <span class="hidden 2xl:inline">Ultra Wide (2xl)</span>
+  </h1>
+  
+  <p class="mt-4">
+    Coba kecilkan atau besarkan jendela browser Anda untuk melihat perubahan warnanya!
+  </p>
+</div>
+</body>
+</html>
