@@ -1,119 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="public/favicon-2.png" />
-  <title>Ricy Rifani Putra</title>
-  <link rel="stylesheet" href="src/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-gray-800 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
-  <!-- Navbar Section Start -->
-  <nav class="flex bg-gray-800/90 backdrop-blur-md p-5 sticky top-0 left-0 w-full z-50 shadow-md items-center">
-    <ul class="flex gap-6 font-extrabold w-full px-6 md:px-20 items-center">
-      <li class="text-2xl md:text-3xl font-serif text-white mr-auto cursor-pointer">
-        <a href="#"><img src="public/r-logo.png" class="size-20"></a>
-      </li>
-      <li class="hidden md:block"><a href="#" class="text-violet-400 hover:text-white transition">About</a></li>
-      <li><a href="#project" class="hover:text-violet-400 transition">Project</a></li>
-      <li><a href="#contact" class="hover:text-violet-400 transition">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Navbar Section End -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon-2.png" />
+    <title>Ricy Rifani Putra</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-800 text-slate-400 antialiased selection:bg-violet-300 selection:text-teal-900">
+    <!-- Navbar Section Start -->
+    <nav class="flex bg-gray-800/90 backdrop-blur-md p-5 sticky top-0 left-0 w-full z-50 shadow-md items-center">
+      <ul class="flex gap-6 font-extrabold w-full px-6 md:px-20 items-center">
+        <li class="text-2xl md:text-3xl font-serif text-white mr-auto cursor-pointer">
+          <a href="#"><img src="public/r-logo.png" class="size-20" /></a>
+        </li>
+        <li class="hidden md:block"><a href="#" class="text-violet-400 hover:text-white transition">About</a></li>
+        <li><a href="#project" class="hover:text-violet-400 transition">Project</a></li>
+        <li><a href="#contact" class="hover:text-violet-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar Section End -->
 
-  <!-- Hero Section Start -->
-  <section class="flex flex-col md:flex-row w-full min-h-[90vh] items-center px-6 md:px-20 py-10" id="about">
+    <!-- Hero Section Start -->
+    <section class="flex flex-col md:flex-row w-full min-h-[90vh] items-center px-6 md:px-20 py-10" id="about">
+      <div class="w-full md:w-1/2 text-left order-2 md:order-1 mt-10 md:mt-0">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
+          Hello, I'm <span class="text-violet-500 transition duration-500 hover:text-violet-300 border border-slate-700 hover:border-slate-300 p-2">Ricy</span>
+        </h1>
+        <h2 class="text-3xl md:text-5xl font-serif">Junior Software <span class="font-bold text-violet-500">Developer</span></h2>
+
+        <p class="mt-8 text-lg md:text-xl leading-relaxed max-w-xl">
+          I’m an IT student low-key obsessed with <span class="font-bold text-violet-500 border-b border-violet-500/30">web dev</span>. Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down
+          from a bug. 🚀
+        </p>
+
+        <div class="mt-10 border border-white rounded-2xl text-white inline-block font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
+          <button type="button" class="cursor-pointer font-semibold md:text-lg">
+            <a href="src/pdf/Personal CV.pdf" target="_blank" class="font-mono">Explore Archive</a>
+          </button>
+        </div>
+      </div>
+      <!-- Hero Section End -->
+
+      <!-- Image Section Start -->
+      <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2">
+        <div class="relative overflow-hidden rounded-4xl group max-w-xs md:max-w-md">
+          <img src="public/ric-1.jpeg" alt="image Ricy" class="w-full h-auto object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 cursor-pointer" />
+        </div>
+      </div>
+    </section>
+    <!-- Image Section End -->
+
+    
+    <!-- TechStack Section Start -->
+
+    <!-- 
+  <section class="flex flex-col md:flex-row w-full min-h-[90vh] items-center px-6 md:px-20 py-10" id="techstack">
     <div class="w-full md:w-1/2 text-left order-2 md:order-1 mt-10 md:mt-0">
-      <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
-        Hello, I'm <span class="text-violet-500 transition duration-500 hover:text-violet-300 border border-slate-700 hover:border-slate-300 p-2">Ricy</span>
-      </h1>
-      <h2 class="text-3xl md:text-5xl font-serif">
-        Junior Software <span class="font-bold text-violet-500 ">Developer</span> 
-      </h2>
-      
-      <p class="mt-8 text-lg md:text-xl leading-relaxed max-w-xl">
-        I’m an IT student low-key obsessed with <span class="font-bold text-violet-500 border-b border-violet-500/30">web dev</span>. 
-        Currently grinding as a beginner to become a super developer, I thrive on challenges and never back down from a bug. 🚀
-      </p>
+      <div>
+        <h1>FrontEnd</h1>
 
-      <div class="mt-10 border border-white rounded-2xl text-white inline-block font-bold md:hover:bg-violet-400 active:hover:bg-violet-400 transition duration-400 p-2 cursor-pointer">
-        <button type="button" class="cursor-pointer font-semibold md:text-lg">
-          <a href="src/pdf/Personal CV.pdf" target="_blank" class="font-mono">Explore Archive</a>
-        </button>
       </div>
     </div>
-    <!-- Hero Section End -->
+  </section> -->
 
-    <!-- Image Section Start -->
-    <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2">
-      <div class="relative overflow-hidden rounded-4xl group max-w-xs md:max-w-md">
-        <img src="public/ric-1.jpeg" alt="image Ricy" 
-             class="w-full h-auto object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0 cursor-pointer">
-      </div>
-    </div>
-  </section>
-  <!-- Image Section End -->
+    <section id="skills" class="py-20 px-6 md:px-20 bg-gray-900/50">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-5xl font-serif font-bold text-white hover:"><span class="text-violet-500">#</span> Tech Stack</h2>
+        </div>
 
-  <!-- Project Section Start -->
-  <section id="project" class="py-32 px-6 lg:px-20 bg-zinc-50 hover:text-violet-400">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex justify-between items-end mb-16">
-        <h2 class="text-4xl lg:text-6xl font-black uppercase italic tracking-tighter">My Project</h2>
-      </div>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="group cursor-pointer">
-          <div class="overflow-hidden rounded-xl bg-zinc-200">
-            <img src="public/soon.jpg" alt="Work" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="group p-6 bg-gray-800 border border-gray-700 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500 hover:-translate-y-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="size-12 mb-4 group-hover:scale-110 transition" alt="HTML5" />
+            <span class="font-mono text-gray-300 group-hover:text-white">HTML5</span>
           </div>
-          <div class="mt-5 flex justify-between items-center px-2">
-            <h4 class="font-bold uppercase text-sm tracking-widest">SOON</h4>
-            <span class="text-zinc-300 text-xs font-bold">01</span>
+
+          <div class="group p-6 bg-gray-800 border border-gray-700 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500 hover:-translate-y-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="size-12 mb-4 group-hover:scale-110 transition" alt="CSS3" />
+            <span class="font-mono text-gray-300 group-hover:text-white">CSS3</span>
           </div>
-        </div>  
+
+          <div class="group p-6 bg-gray-800 border border-gray-700 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500 hover:-translate-y-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="size-12 mb-4 group-hover:scale-110 transition" alt="JavaScript" />
+            <span class="font-mono text-gray-300 group-hover:text-white">JavaScript</span>
+          </div>
+
+          <div class="group p-6 bg-gray-800 border border-gray-700 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500 hover:-translate-y-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="size-12 mb-4 group-hover:scale-110 transition" alt="Tailwind" />
+            <span class="font-mono text-gray-300 group-hover:text-white">Tailwind</span>
+          </div>
+
+          <div class="group p-6 bg-gray-800 border border-gray-700 rounded-2xl flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500 hover:-translate-y-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="size-12 mb-4 group-hover:scale-110 transition" alt="Git" />
+            <span class="font-mono text-gray-300 group-hover:text-white">Git</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Project Section End -->
+    </section>
+    <!-- TechStack Section End -->
 
-  <!--  -->
+    <!-- Project Section Start -->
+    <section id="project" class="py-32 px-6 lg:px-20 bg-zinc-50 hover:text-violet-400">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-16">
+          <h2 class="text-4xl lg:text-6xl font-black uppercase italic tracking-tighter">My Project</h2>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact" class="w-full py-20 px-6">
-    <div class="max-w-6xl mx-auto mb-10">
-      <h3 class="text-white mb-4 text-5xl font-semibold italic"><span class="text-violet-400 text-5xl">#</span> contacts <span></span></h3>
-    </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="group cursor-pointer">
+            <div class="overflow-hidden rounded-xl bg-zinc-200">
+              <img src="public/soon.jpg" alt="Work" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+            <div class="mt-5 flex justify-between items-center px-2">
+              <h4 class="font-bold uppercase text-sm tracking-widest">SOON</h4>
+              <span class="text-zinc-300 text-xs font-bold">01</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project Section End -->
 
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-      <div class="text-gray-300 text-2xl text-left">
-        <p>Feel free to contact me if there is anything else you need or if you have any questions.</p>
+    <!-- Contact -->
+    <section id="contact" class="w-full py-20 px-6">
+      <div class="max-w-6xl mx-auto mb-10">
+        <h3 class="text-white mb-4 text-5xl font-semibold italic"><span class="text-violet-400 text-5xl">#</span> contacts <span></span></h3>
       </div>
 
-      <div class="space-y-3 border border-gray-500 text-xl font-extrabold p-6 m-6 hover:border-gray-100 transition duration-600 cursor-pointer w-full md:w-auto md:justify-self-end ">
-        <p class="text-center md:text-left">Message me here</p>
-        <a href="mailto:ricyrfnputra51@gmail.com"
-        class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
-        <span class="flex group-hover:scale-110 transition-transform"><img src="public/email.svg" alt="email" class="w-6 h-6"></span>
-        <span class="font-medium font-mono lg:text-lg text-base">ricyrfnputra51@gmail.com</span>
-        </a>      
-        <a href="github.com/ricyrfnputra"
-        class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
-        <span class="flex group-hover:scale-110 transition-transform"><img src="public/github.svg" alt="github" class="w-6 h-6"></span>
-        <span class="font-medium font-mono">ricyrfnputra</span>
-        </a>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div class="text-gray-300 text-2xl text-left">
+          <p>Feel free to contact me if there is anything else you need or if you have any questions.</p>
+        </div>
+
+        <div class="space-y-3 border border-gray-500 text-xl font-extrabold p-6 m-6 hover:border-gray-100 transition duration-600 cursor-pointer w-full md:w-auto md:justify-self-end">
+          <p class="text-center md:text-left">Message me here</p>
+          <a href="mailto:ricyrfnputra51@gmail.com" class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
+            <span class="flex group-hover:scale-110 transition-transform"><img src="public/email.svg" alt="email" class="w-6 h-6" /></span>
+            <span class="font-medium font-mono lg:text-lg text-base">ricyrfnputra51@gmail.com</span>
+          </a>
+          <a href="github.com/ricyrfnputra" class="flex items-center justify-center gap-2 p-2 text-gray-100 hover:text-gray-200">
+            <span class="flex group-hover:scale-110 transition-transform"><img src="public/github.svg" alt="github" class="w-6 h-6" /></span>
+            <span class="font-medium font-mono">ricyrfnputra</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer Section -->
+    <!-- Footer Section -->
 
-  <footer class="py-6 border-t border-gray-600">
-    <p class="text-sm text-gray-500 text-center md:text-left font-mono">
-      &copy; 2026 ricyrfnputra.<span class="hidden sm:inline">All Rights Reserved.</span>
-    </p>
-  </footer>
+    <footer class="py-6 border-t border-gray-600">
+      <p class="text-sm text-gray-500 text-center md:text-left font-mono">&copy; 2026 ricyrfnputra.<span class="hidden sm:inline">All Rights Reserved.</span></p>
+    </footer>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
